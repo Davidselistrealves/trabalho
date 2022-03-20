@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Form_Login">
+
+    //Campo onde coloquei imagen do topo da tela
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:paddingTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    //criei um container para colocar os editaveis dentro
+    <View
+        android:id="@+id/container_components"
+        style="@style/ContainerComponents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        />
+    //campo editável para email
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/Edit_Text"
+        android:hint="Email"
+
+        android:drawableRight="@drawable/ic_email"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintTop_toTopOf="@+id/container_components"
+        />
+
+    // campo editavél para senha
+    <EditText
+        android:id="@+id/edit_senha"
+        style="@style/Edit_Text"
+        android:hint="Senha"
+
+        android:drawableRight="@drawable/ic_eye"
+
+        android:textColorHint="@color/black"
+
+        android:textColor="@color/black"
+        android:inputType="numberPassword"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
+
+        />
+    // não consegui colocar botão , então achei essa opção na documentação
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botao"
+        style="@style/botao"
+        android:layout_width="327dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background"
+        android:padding="20dp"
+        android:text="@string/entrar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        android:textStyle="bold"
+        app:circularflow_defaultRadius="20dp"
+        app:circularflow_radiusInDP="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_senha" />
+    // barra de progresso para quando clicar entrar rodar enquanto vai para próxima tela
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/text_tela_cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_components" />
+
+    //um campo que recebe evento de clique para chamar próxima tela
+    <TextView
+        android:id="@+id/text_tela_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_cadastro"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="50dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/progressbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/progressbar"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Form_Perfil"
+    android:id="@+id/third_fragment"
+    >
+
+
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="131dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="16dp"
+        android:background="#100B0B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/nome_da_pessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:hint="@string/nome_pessoa"
+        android:textColorHint="@color/white"
+        android:visibility="visible"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_perfil" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="177dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="140dp"
+        android:background="@color/white"
+        android:src="@drawable/arte1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nome_da_pessoa"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageview4"
+        android:layout_width="182dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="140dp"
+        android:background="@color/white"
+        android:adjustViewBounds="true"
+
+        android:src="@drawable/arte2"
+        app:layout_constraintStart_toStartOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/nome_da_pessoa" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="147dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="356dp"
+        android:background="@color/white"
+        android:src="@drawable/arte3"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nome_da_pessoa"
+         />
+
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="356dp"
+        android:background="@color/white"
+        android:src="@drawable/arte4"
+        app:layout_constraintStart_toStartOf="@id/imageView5"
+        app:layout_constraintTop_toTopOf="@id/nome_da_pessoa"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Galeria Digital Art"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nome_da_pessoa" />
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
